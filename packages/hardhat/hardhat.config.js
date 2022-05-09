@@ -1,3 +1,18 @@
+/* eslint-disable eqeqeq */
+/* eslint-disable no-use-before-define */
+/* eslint-disable consistent-return */
+/* eslint-disable new-cap */
+/* eslint-disable no-throw-literal */
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable no-await-in-loop */
+/* eslint-disable guard-for-in */
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable global-require */
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-undef */
+/* eslint-disable no-shadow */
+/* eslint-disable camelcase */
+/* eslint-disable no-unused-vars */
 require("dotenv").config();
 const { utils } = require("ethers");
 const fs = require("fs");
@@ -15,12 +30,12 @@ require("@nomiclabs/hardhat-etherscan");
 const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 
 /*
-      📡 This is where you configure your deploy configuration for 🏗 scaffold-eth
+  📡 This is where you configure your deploy configuration for 🏗 scaffold-eth
 
-      check out `packages/scripts/deploy.js` to customize your deployment
+  check out `packages/scripts/deploy.js` to customize your deployment
 
-      out of the box it will auto deploy anything in the `contracts` folder and named *.sol
-      plus it will use *.args for constructor args
+  out of the box it will auto deploy anything in the `contracts` folder and named *.sol
+  plus it will use *.args for constructor args
 */
 
 //
@@ -230,33 +245,33 @@ module.exports = {
       },
     },
     moonbeam: {
-      url: 'https://rpc.api.moonbeam.network',
+      url: "https://rpc.api.moonbeam.network",
       chainId: 1284,
       accounts: {
         mnemonic: mnemonic(),
       },
     },
     moonriver: {
-      url: 'https://rpc.api.moonriver.moonbeam.network',
+      url: "https://rpc.api.moonriver.moonbeam.network",
       chainId: 1285,
       accounts: {
         mnemonic: mnemonic(),
       },
     },
     moonbaseAlpha: {
-      url: 'https://rpc.api.moonbase.moonbeam.network',
+      url: "https://rpc.api.moonbase.moonbeam.network",
       chainId: 1287,
       accounts: {
         mnemonic: mnemonic(),
       },
     },
     moonbeamDevNode: {
-      url: 'http://127.0.0.1:9933',
+      url: "http://127.0.0.1:9933",
       chainId: 1281,
       accounts: {
         mnemonic: mnemonic(),
       },
-    }
+    },
   },
   solidity: {
     compilers: [
@@ -346,20 +361,20 @@ task("fundedwallet", "Create a wallet (pk) link and fund it with deployer?")
       deployerWallet = deployerWallet.connect(ethers.provider);
       console.log(
         "💵 Sending " +
-        amount +
-        " ETH to " +
-        randomWallet.address +
-        " using deployer account"
+          amount +
+          " ETH to " +
+          randomWallet.address +
+          " using deployer account"
       );
       const sendresult = await deployerWallet.sendTransaction(tx);
       console.log("\n" + url + "/pk#" + privateKey + "\n");
     } else {
       console.log(
         "💵 Sending " +
-        amount +
-        " ETH to " +
-        randomWallet.address +
-        " using local node"
+          amount +
+          " ETH to " +
+          randomWallet.address +
+          " using local node"
       );
       console.log("\n" + url + "/pk#" + privateKey + "\n");
       return send(ethers.provider.getSigner(), tx);
@@ -389,8 +404,8 @@ task(
       "0x" + EthUtil.privateToAddress(wallet._privKey).toString("hex");
     console.log(
       "🔐 Account Generated as " +
-      address +
-      " and set as mnemonic in packages/hardhat"
+        address +
+        " and set as mnemonic in packages/hardhat"
     );
     console.log(
       "💬 Use 'yarn run account' to get more information about the deployment account."
@@ -449,12 +464,12 @@ task(
 
     console.log(
       "⛏  Account Mined as " +
-      address +
-      " and set as mnemonic in packages/hardhat"
+        address +
+        " and set as mnemonic in packages/hardhat"
     );
     console.log(
       "📜 This will create the first contract: " +
-      chalk.magenta("0x" + contract_address)
+        chalk.magenta("0x" + contract_address)
     );
     console.log(
       "💬 Use 'yarn run account' to get more information about the deployment account."
