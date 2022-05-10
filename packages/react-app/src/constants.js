@@ -1,12 +1,13 @@
 // MY INFURA_ID, SWAP IN YOURS FROM https://infura.io/dashboard/ethereum
-export const INFURA_ID = "070ef7d7bb0b426b99737aca44d89293";
+export const INFURA_ID = "070ef7d7bb0b426b99737aca44d89293"; // 已经替换
 
 // MY ETHERSCAN_ID, SWAP IN YOURS FROM https://etherscan.io/myapikey
-export const ETHERSCAN_KEY = "H5IQ4E5HAX37J84K4IB8HFT4H8XQGU4DR4";
+export const ETHERSCAN_KEY = "H5IQ4E5HAX37J84K4IB8HFT4H8XQGU4DR4"; // 已经替换
 
-// BLOCKNATIVE ID FOR Notify.js:
-export const BLOCKNATIVE_DAPPID = "0b58206a-f3c0-4701-a62f-73c7243e8c77";
+// BLOCKNATIVE ID FOR Notify.js: https://explorer.blocknative.com/account
+export const BLOCKNATIVE_DAPPID = "b8c821e5-f207-455b-a8d7-c84797a321f7"; // 已经替换
 
+// https://dashboard.alchemyapi.io/ 已经替换
 export const ALCHEMY_KEY = "KxXUpX2yISTPZnybNJfU6zDllGfOSg3N"; // mainnet
 // export const ALCHEMY_KEY = "U-cLjbpbgZrkwbOFmh7loNkG1AV6MN9J"; // ropsten
 // export const ALCHEMY_KEY = "ySjQ6SglxSehTvTipsogl1w8ec94adIA"; // rinkeby
